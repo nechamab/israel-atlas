@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Israel Atlas</title>
+
+  <!-- MapLibre GL JS -->
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+  <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+
+  <!-- RTL text plugin for Hebrew -->
+  <script src="https://unpkg.com/@mapbox/mapbox-gl-rtl-text@0.3.0/mapbox-gl-rtl-text.min.js"></script>
+
+  <!-- deck.gl -->
+  <script src="https://unpkg.com/deck.gl@9.0.16/dist.min.js"></script>
+
+  <!-- Supercluster -->
+  <script src="https://unpkg.com/supercluster@8.0.1/dist/supercluster.min.js"></script>
+
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <div id="map"></div>
+
+  <!-- Language toggle -->
+  <div id="language-control" class="control-panel top-left">
+    <button id="lang-toggle" title="Switch language">עברית / English</button>
+  </div>
+
+  <!-- Layer controls -->
+  <div id="layer-control" class="control-panel top-right">
+    <h3 data-he="שכבות" data-en="Layers">Layers</h3>
+    <label>
+      <input type="checkbox" id="toggle-transit-stops" checked>
+      <span data-he="תחנות תחבורה" data-en="Transit Stops">Transit Stops</span>
+    </label>
+    <label>
+      <input type="checkbox" id="toggle-transit-routes" checked>
+      <span data-he="קווי תחבורה" data-en="Transit Routes">Transit Routes</span>
+    </label>
+  </div>
+
+  <!-- Popup -->
+  <div id="popup" class="popup hidden"></div>
+
+  <script type="module" src="src/app.js"></script>
+</body>
+</html>

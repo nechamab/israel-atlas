@@ -1,0 +1,15 @@
+{
+  "name": "israel-atlas",
+  "version": "1.0.0",
+  "description": "Interactive atlas of Israel with transit, biblical, and geographic layers",
+  "scripts": {
+    "dev": "npx http-server . -p 8080 -c-1 --cors",
+    "fetch-gtfs": "node scripts/fetch-gtfs.js",
+    "fetch-osm": "node scripts/fetch-osm.js",
+    "fetch-biblical": "node scripts/fetch-biblical.js",
+    "fetch-data": "npm run fetch-gtfs && npm run fetch-biblical"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
